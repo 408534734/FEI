@@ -1,7 +1,9 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
+## 使用五点差分格式解一个泊松方程
+
 #### TARGET_EQUATION
-$$f = cos(3x)\*sin(\pi\*y)$$
+$${\Delta}u = cos(3x)\*sin(\pi\*y)$$
 
 ####@ DOWN_SIDE_BORDER : (j = 0)
 $$\underline{u_{i,j}} = 0$$
