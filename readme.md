@@ -5,7 +5,7 @@
 ## 功能简介
 - 因为在数值计算编程中往往涉及到在打码中插入大量的公式，而在将公式键入代码时非常容易出现各种错误，所以开发了本解释器，可以将要键入代码的公式用另外的文档以**MarkDown**格式和**LaTeX数学公式**格式存于`FEI.md`中，在预览中实现非常人性化的可视化
 - 本解释器的功能有两个：**表达式解释器**和**方程解释器**
-![image](https://github.com/408534734/FEI/raw/master/doc/EFI.jpg)
+![image](https://github.com/408534734/FEI/raw/master/doc/FEI.jpg)
 
 #### 表达式解释器
 - 表达式解释器既可以用整条式子替换需要预编译的地方，也会自动识别当前面存在`=`或者`return`只替换为表达式的右边
@@ -50,7 +50,7 @@
 - 希腊字母例如`\pi`一律直接去除`\`，可识别的希腊字母见`希腊字母.md`
 - 数字与变量之间可以忽略乘号`*`
 - 对于出现的所有整数，未避免精度丢失，将在所有整数前添加`DATA_FORMAT`以实现精度转化，这是在`FEI.py`第七行中定义的全局变量，这里默认`=(float)`
-![image](https://github.com/408534734/FEI/raw/master/doc/EFI_md.jpg)
+![image](https://github.com/408534734/FEI/raw/master/doc/FEI_md.jpg)
 
 ## `*.cpp`编写格式
 - 在代码中需要预编译的地方添加`##NAME_OF_EFI`即可在编译时编译为相应的公式
@@ -71,7 +71,7 @@
 	- `FEI(n, row)` 构造函数，自动调用（不用管）
 	- `set(coloum, row)` *void* 设置值的函数，自动调用（不用管）
 - 相邻的两个需要方程预编译的地方应该分别用`{}{}`包裹，因为替换内容中会出现局部变量
-![image](https://github.com/408534734/FEI/raw/master/doc/EFI_cpp.jpg)
+![image](https://github.com/408534734/FEI/raw/master/doc/FEI_cpp.jpg)
 
 ## 文件结构
 - `bin` 存放编译后的可执行文件
